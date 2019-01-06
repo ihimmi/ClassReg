@@ -1,0 +1,13 @@
+// Custom.scss
+// Option A: Include all of Bootstrap
+
+
+
+$theme-colors: (
+  "primary": #510c76,
+  "Success": #94d600
+  "warn":#ff6c00,
+  "danger": #cf009f
+);
+
+@import "../node_modules/bootstrap/scss/bootstrap";

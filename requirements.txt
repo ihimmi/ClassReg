@@ -1,0 +1,102 @@
+Requirements for a C (75-100)
+
+1. Home page - Login page
+	Need to be able to select Student or Faculty
+	Username: university_id
+	password: must use MD5 Hashing
+		link to JavaScript hashing code: https://raw.githubusercontent.com/blueimp/JavaScript-MD5/master/js/md5.min.js
+		hash = md5("value"); // "2063c1608d6e0baf80249c42e2be5804"
+	Login Button
+	Create New User
+		upload university_id and hashed password to server
+		server adds the person to database if university_id is not already in the database
+			Error if university_id is in database already
+
+2. Search Page - Redirect after login
+	Checklist of department subject (4 letter code) and department full_name
+		At least one must be checked
+	Text box for course_number
+		This is an optional search field
+	Text box for section crn
+		This is also an optional field
+	
+	After search button is clicked, perform a POST request using the XMLHttpRequest object
+		Server should query the database and respond with a JSON object of matches
+		Browser should parse the JSON object and create a table of course sections 
+		In the Table:
+			Course subject (4 letter department code)
+			Course number
+			Course section
+			Course name
+			Building and room
+			Section professors
+			Course credits
+			Section crn
+			Section number registered / capacity
+			Section waitlist count
+		Table should be ordered:
+			1. Subject in alphabetical order
+			2. Course number in ascending order
+
+	Clicking a row should make the section expand to show, clicking again should re-collapse
+			Table of sections class days/times
+			Course description
+			Register button (Only for students)
+				Registering should send a POST request using XMLHttpRequest to register / add to waitlist
+					Return an error if the student is already registered in that class
+			View Roster (Faculty only)
+				Show list of registered and waitlisted students
+					List needs to include:
+						university_id
+						first name
+						last name
+
+3. About page
+	Short bio about each team member, include a photo
+	Description of tools used to create the application
+	Video demo (2-4 minutes)
+			
+
+Five additional points for each item below (max of 30/25)
+
+1. Provide a loading animation while results are being fetched from the server
+
+2. Color code rows in course listings
+	Example colors, can choose whatever
+		1. Light gray background if not registered
+		2. Yellow background if waitlisted
+		3. Green background if registered
+	
+3. Enable students to drop classes they are currently registered or waitlisted in by replacing register button with drop button
+	Make sure the database gets updated
+	Automatically move first person on waitlist to registered if needed
+
+4. Prevent students from registered for two different classes that have a time conflict
+
+5. Allow students to view schedule
+	Must be a table with dates/times of all courses registered for
+		Need to be able to drop this view
+
+6. Create a pre-registration system
+	Allow students to create a wishlist of classes they want to preregister for
+	Students need to be able to view their wishlist and register to all of them with one click
+		If section is full put on waitlist		
+		
+
+-----------------------------------
+
+
+11/28 Update and Next Steps:
+Author- Christian Linhardt 
+	
+	A. Homepage/Login requirement (1) is functionally complete but needs styling 
+	B. CL has started the search page (2) including the ability to fill the table based on a user pressing a search button
+			NEXT STEPS:
+				- Each subject represented as a checklist item for the user to select
+				- The optional CRN search box
+				- The optional Course_number search box
+				IMPORTANT: Once these are complete need adjust our post request and database functionality to handle a users ability to 1. Check multiple subjects at once 2. Search based on CRN 3. Search based on course number 
+
+
+
+		

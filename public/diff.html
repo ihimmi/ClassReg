@@ -1,0 +1,121 @@
+<!doctype html>
+<html>
+	<head>
+		<title> Differences </title>
+		<meta charset="UTF-8"> 
+
+		 <!-- Bootstrap CSS -->
+		 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+		 <link rel="stylesheet" href="navbar.css">
+        <!--JavaScript for Bootsstrap-->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+            <nav class="navbar">
+
+                <!--St Thomas logo header -->
+                <a class="nav-brand st-thomas-logo" href="http://www.stthomas.edu/">
+                    University of St. Thomas  EMinnesota  EA private, Catholic liberal arts university
+                </a>
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown">
+                        Menu
+              </a>
+    
+                <div class="dropdown-menu dropdown-menu-right">
+                       
+                        <a class="dropdown-item" href="about.html" onMouseOver="this.style.cursor='pointer'" style="display:block;">About Us</a>
+                        <a class="dropdown-item" href="diff.html" onMouseOver="this.style.cursor='pointer'" style="display:block;">Differences</a>
+                        <a class="dropdown-item" href="index.html" onMouseOver="this.style.cursor='pointer'" style="display:block;">Login</a>
+                        
+                </div>
+        
+            </nav>
+        
+        
+            <div class= " jumbotron coolgray whitetext" style="background-color: #98999b">
+                <h3 class="text-center" > Differences between Coursefinder and Murphy Online </h1>
+            </div>
+
+
+        <div class = "container">
+            <div class= "row">
+                <div class="card col-sm-3 offset-sm-2">
+                        <div class="card-title">
+                                <h4> Subject Selection</h4> 
+                             </div>
+                    <img class= "card-img-top" src="pic/textSelectionComparison.png" alt="placeholder">
+
+                        <p>
+                                Murphy Online uses a cumbersome text select box in order to filter classes by subject matter. Selecting multiple classes requires the user to unintuitively control click on multiple subjects within the select box. CourseFinder uses an expandable list of check boxes, making it simple for the user to understand and change the selected subjects.
+                        </p>
+                    </div> 
+                    <div class="card col-sm-3 offset-sm-2">
+                            <div class="card-title">
+                                    <h4> Wishlist</h4> 
+                                 </div>
+                            <img class= "card-img-top" src="pic/wishlist.PNG" alt="placeholder">
+
+                                <p>
+                                        Our registration system allows users to save a wishlist of classes they would like to register for in the future, providing easy access to these classes at the time of registration. They can even register classes from this view. Users save time and stress during the registration process, as they can quickly access the classes they have planned to take. Murphy Online does not provide this functionality.
+                                </p>
+                            </div> 
+
+             </div>
+
+             <div class= "row mt-3">
+                    <div class="card col-sm-3 offset-sm-2">
+                            <div class="card-title">
+                                    <h4> Schedule Viewer</h4> 
+                                 </div>
+                        <img class= "card-img-top" src="pic/schedule.PNG" alt="placeholder">
+
+                            <p>
+                                    Our registration system allows the user to quickly navigate to classes that they are currently registered for, displaying valuable information like the class's time, name, and professor. Murphy Online's schedule viewer is not as comprehensive for planning one's schedule.
+                            </p>
+                        </div> 
+                        <div class="card col-sm-3 offset-sm-2">
+                                <div class="card-title">
+                                        <h4> Course Highlighting</h4> 
+                                     </div>
+                                <img class= "card-img-top" src="pic/waitlist.PNG" alt="placeholder">
+
+                                    <p>
+                                           In our registration system, classes that the student is registered for will appear in green, and classes that the student has waitlisted will appear in yellow. 
+                                    </p>
+                                </div> 
+    
+                 </div>
+
+             <div class= "row mt-3">
+                    <div class="card col-sm-3 offset-sm-2">
+                        
+                        <div class="card-title">
+                               <h4> Websocket Updates</h4> 
+                            </div>
+                            <p>
+                                    Our registration system will update the number of registered students for a given class in real time without page refreshing by utilizing web sockets. It will even update the GUI immediately to prevent users from registering. Murphy Online only updates the number registered users when the page is refreshed, leading to the potential situation of registering for a course only to discover that it was filled by other students on submission.
+                            </p>
+                        </div> 
+                        <div class="card col-sm-3 offset-sm-2">
+                                
+                                <div class="card-title">
+                                       <h4> Waitlist</h4> 
+                                    </div>
+                                    <p>
+                                            Murphy Online's waitlist system requires the student to search for the class,write down the CRN, and attempt to register for it with the CRN on the Add/Drop page. During this whole process, the student will not know if the class is available or has a waitlist, as the class will appear to be closed. On the other hand,  our registration system has a unified waitlist system. When a course is full, our search system will display an option to "Add to Waitlist." Students who are on the waitlist will be automatically moved to the list of registered students when a spot becomes available. In addition, classes that the user has on their waitlist show up in the search with a yellow background, while registered classes appear in green.
+                                    </p>
+                                </div> 
+    
+                 </div>
+
+
+        </div>
+
+
+    </body>
+</html>
